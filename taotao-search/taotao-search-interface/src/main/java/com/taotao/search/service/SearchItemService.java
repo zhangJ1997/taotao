@@ -8,4 +8,7 @@ public interface SearchItemService {
 	 * @return
 	 */
 	public TaotaoResult importAllItems();
+
+	public TaotaoResult addDocument(long itemId);
+
 }

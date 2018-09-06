@@ -11,7 +11,8 @@
   		INSERT INTO tbitem(id,title,sellPoint,price,num,barcode,image,cid,status,created,updated) 
   		VALUE(#{id},#{title},#{sellPoint},#{price},#{num},#{barcode},#{image},#{cid},#{status},#{created},#{updated})
   	</insert>
-  	<insert id="addTbItemDesc" parameterType="com.taotao.pojo.Tbitemdesc">
-  		INSERT INTO tbitemdesc(itemId,itemDesc,created,updated) VALUE(#{itemId},#{itemDesc},#{created},#{updated})
-  	</insert>
+	<insert id="addTbItemDesc" parameterType="com.taotao.pojo.Tbitemdesc">
+		INSERT INTO tbitemdesc(itemId,itemDesc,created,updated) VALUE(#{itemId},#{itemDesc},#{created},#{updated})
+	</insert>
+
 </mapper>
