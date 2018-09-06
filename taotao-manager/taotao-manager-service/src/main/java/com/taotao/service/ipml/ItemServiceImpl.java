@@ -38,7 +38,7 @@ import javax.jms.TextMessage;
 @Service
 public class ItemServiceImpl implements ItemService {
 	@Value("${ITEM_INFO}")
-	private String ITEM_INFO;
+	private String ITEM_INFO = "aaa";
 	@Value("${BASE}")
 	private String BASE;
 	@Value("${DESC}")
@@ -46,7 +46,9 @@ public class ItemServiceImpl implements ItemService {
 	@Value("${PARAM}")
 	private String PARAM;
 	@Value("${Expiry_TIME}")
-	private Integer Expiry_TIME;
+	private int Expiry_TIME;
+
+
 	@Autowired
 	private JedisClient jedisClient;
 	@Autowired
