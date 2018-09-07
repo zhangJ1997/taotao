@@ -61,7 +61,6 @@ public class ItemServiceImpl implements ItemService {
 	private TbitemdescMapper tbitemdescMapper;
 	@Override
 	public Tbitem getItemById(long itemId) {
-		System.out.println("aaaaaaaaa");
 		try {
 			//从缓冲中取数据
 			String json = jedisClient.get(ITEM_INFO + ":" + itemId + BASE);

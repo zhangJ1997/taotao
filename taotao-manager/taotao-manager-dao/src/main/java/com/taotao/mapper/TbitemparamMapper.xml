@@ -6,4 +6,8 @@
       SELECT * FROM tbitemparam WHERE itemCatId = #{itemCatId}
 
     </select>
+    <insert id="addItemParam" parameterType="com.taotao.pojo.Tbitemparam">
+        INSERT INTO tbitemparam(itemCatId, paramData, created, updated) VALUE (#{itemCatId},#{paramData},#{created},#{updated})
+
+    </insert>
 </mapper>

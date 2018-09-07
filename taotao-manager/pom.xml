@@ -1,12 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>taotao-manager-pojo</module>
-        <module>taotao-manager-interface</module>
-        <module>taotao-manager-dao</module>
-        <module>taotao-manager-service</module>
-    </modules>
     <parent>
         <groupId>com.taotao</groupId>
         <artifactId>taotao-parent</artifactId>
@@ -23,8 +17,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-
+    <modules>
+        <module>taotao-manager-pojo</module>
+        <module>taotao-manager-dao</module>
+        <module>taotao-manager-interface</module>
+        <module>taotao-manager-service</module>
+    </modules>
     <!-- 配置tomcat插件 -->
     <build>
         <plugins>
@@ -37,18 +35,5 @@
                 </configuration>
             </plugin>
         </plugins>
-
-            <resources>
-                <resource>
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.properties</include>
-                        <include>**/*.xml</include>
-                    </includes>
-                    <filtering>false</filtering>
-                </resource>
-
-            </resources>
-
     </build>
 </project>

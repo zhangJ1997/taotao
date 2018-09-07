@@ -7,6 +7,8 @@ import com.taotao.service.ItemParamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class ItemParamServiceImpl implements ItemParamService {
     @Autowired
@@ -17,6 +19,20 @@ public class ItemParamServiceImpl implements ItemParamService {
         Tbitemparam itemParam = tbitemparamMapper.getItemParamByCid(itemCatId);
         if(itemParam != null){
             return TaotaoResult.ok(itemParam);
+        }
+        return TaotaoResult.ok();
+    }
+
+    @Override
+    public TaotaoResult addItemParam(Tbitemparam tbitemParam) {
+        try {
+            Date date = new Date();
+            tbitemParam.setCreated(date);
+            tbitemParam.setUpdated(date);
+            tbitemparamMapper.addItemParam(tbitemParam);
+            return TaotaoResult.ok(tbitemParam);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return TaotaoResult.ok();
     }

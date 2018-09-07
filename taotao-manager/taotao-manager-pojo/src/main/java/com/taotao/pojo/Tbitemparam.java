@@ -1,17 +1,18 @@
 package com.taotao.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Tbitemparam {
+public class Tbitemparam implements Serializable{
     private Long id;
 
-    private Long itemcatid;
+    private Long itemCatId;
 
     private Date created;
 
     private Date updated;
 
-    private String paramdata;
+    private String paramData;
 
     public Long getId() {
         return id;
@@ -21,13 +22,6 @@ public class Tbitemparam {
         this.id = id;
     }
 
-    public Long getItemcatid() {
-        return itemcatid;
-    }
-
-    public void setItemcatid(Long itemcatid) {
-        this.itemcatid = itemcatid;
-    }
 
     public Date getCreated() {
         return created;
@@ -45,11 +39,19 @@ public class Tbitemparam {
         this.updated = updated;
     }
 
-    public String getParamdata() {
-        return paramdata;
+    public Long getItemCatId() {
+        return itemCatId;
     }
 
-    public void setParamdata(String paramdata) {
-        this.paramdata = paramdata == null ? null : paramdata.trim();
+    public void setItemCatId(Long itemCatId) {
+        this.itemCatId = itemCatId;
+    }
+
+    public String getParamData() {
+        return paramData;
+    }
+
+    public void setParamData(String paramData) {
+        this.paramData = paramData;
     }
 }
